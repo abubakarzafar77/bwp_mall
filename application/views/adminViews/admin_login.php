@@ -2,7 +2,10 @@
 
 
 <div class="container">
-	<form class="form-horizontal">
+	<?php 	
+		$attr = array('class'=>'form-horizontal','id'=>'myForm');
+		echo form_open('admin/login/admin_login' , $attr); 
+	?>
 		<fieldset>
 			<legend>Admin Login</legend>
 			<div class="row">
@@ -15,6 +18,9 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
+
+
+				
 				</div>
 			</div>
 			<div class="row">
@@ -38,4 +44,6 @@
 		</fieldset>
 	</form>
 </div>
+<?php echo validation_errors(); ?>
+<?php echo  $this->session->userdata('invalid_login');?>
 <?php include('admin_footer.php');?>

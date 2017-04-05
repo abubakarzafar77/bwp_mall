@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>City Mall</title>
+	<title>Bwp Mall</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css');?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/font-awesome.css');?>">
@@ -23,7 +23,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Mall Admin</a>
+				<a class="navbar-brand" href="#"><?= $this->session->userdata('admin_name');?> Admin</a>
 				</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 				<form class="navbar-form navbar-left" role="search">
@@ -33,7 +33,7 @@
 					<button type="submit" class="btn btn-default">Submit</button>
 				</form>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Logout</a></li>
+					<li><?= anchor('admin/logout','Logout');?></li>
 				</ul>
 			</div>
 		</div>
